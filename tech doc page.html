@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Documentation</title>
+<link rel="stylesheet" type="text/css" href="style5.css">
+</head>
+<body>
+<main id="main-doc">
+<div id="menu">
+<nav id="navbar">
+<header>C Documentation</header>
+<ul>
+<li><a href="#Introduction" class="nav-link">Introduction</a></li>
+<li><a href="#Variables" class="nav-link">Variables</a></li>
+<li><a href="#Datatypes" class="nav-link">Datatypes</a></li>
+<li><a href="#Operators" class="nav-link">Operators</a></li>
+<li><a href="#Looping" class="nav-link">Looping</a></li>
+<li><a href="#Arrays" class="nav-link">Arrays</a></li>
+<li><a href="#Functions" class="nav-link">Functions</a></li>
+<li><a href="#Structures" class="nav-link">Structures</a></li>
+<li><a href="#Files" class="nav-link">Files</a></li>
+</ul>
+</nav>
+</div>
+
+
+<div id="content">
+<div id="cont1">
+<section class="main-section" id="Introduction">
+<header> Introduction</header>
+<p>A language should be understood the same way by compiler writers and programmers all over the world. To facilitate this, the languages are standardized by international organizations like the ISO. C has been standardized by the American National Standards Institute (ANSI) since 1989 and subsequently by the International Organization for Standardization (ISO). The language ‘C’ has 4 historical land marks.</p>
+<ul>
+<li> K & R ‘C’ : defined by the seminal book on ‘C’ by Kernighan and Ritchie </li>
+<li> C 89</li>
+<li> C 99</li>
+<li> C 11</li> 
+</ul>
+ </section>
+</div>
+
+<div id="cont2">
+
+<section class="main-section" id="Variables">
+<header> Variables</header>
+<p>This is the most important concept in all languages. Variable is a name given to a storage area that our programs can manipulate. It has a name, a value, a location and a type. It also has something called life, scope, qualifiers etc. We will discuss the second part later in the course. Sometimes, the runtime makes variables with no names. These are called temporary variables. We cannot access them by name as we have no name in out vocabulary. A variable has a type. In ‘C’, type should be specified before a variable is ever used. We declare the variable with respect to type before using it. We cannot declare the variable more than once.</p>
+</section>
+</div>
+
+<div id="cont3">
+
+<section class="main-section" id="Datatypes">
+<header> Datatypes</header>
+The size of a type – size required to represent a value of that type – can be found using an operator called sizeof.  The sizeof a type depends on the implementation. We should never conclude that the size of an int is 4 bytes. The size of a type is decided on an implementation based on efficiency.The amount of storage to be reserved for the specified variable.  Significance of data types are given below: </p>
+<ul>
+<li> Memory allocation</li> 
+<li>Range of values allowed</li>
+<li> Operations that are bound to this type</li>
+<li> Type of data to be stored </li>
+</ul>
+<code>
+int a;<br>
+double b;</code>
+</section>
+</div>
+
+<div id="cont4">
+<section class="main-section" id="Operators">
+<header> Operators</header>
+
+<p>An operator is a symbol that tells the compiler to perform specific mathematical or logical functions. Operator is a symbol used for calculations or evaluations.Types of operators are:</p>
+<ul>
+<li>Arithmetic Operators</li>
+<li> Increment and Decrement Operators</li> 
+<li>Relational </li>
+<li>Logical</li>
+<li>Bitwise</li>
+<li>Address Operator and Dereferencing Operator </li>
+<li> Assignment </li>
+ <li>misc operators </li>
+</ul>
+<code>
+c=a+b;<br>
+c=a-b;<br>
+c=a*b;<br>
+c=a/b;<br>
+c=a%b;<br>
+c=a&&b;<br>
+c=a||b;<br>
+c=!a;<br>
+c=a^b;<br>
+c=a&b;<br>
+c=a|b;<br>
+c=a<<b;<br>
+c=a>>b;<br>
+c=~b;<br>
+</code>
+</section>
+</div>
+
+<div id="cont5">
+
+<section class="main-section"  id="Looping">
+<header> Looping</header>
+<p>You may encounter situations, when a block of code needs to be executed several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.Programming languages provide various control structures that allow for more complicated execution paths.A loop statement allows us to execute a statement or group of statements multiple times.  Loop becomes an infinite loop if a condition never becomes false. The for loop is traditionally used for this purpose. Since none of the three expressions that form the 'for' loop are required, you can make an endless loop by leaving the conditional expression empty.The 3 types of loops are</p>
+<ul>
+<li>while</li>
+<li>for</li>
+<li>do while</li>
+</ul>
+<code>
+int n = 5;  
+while(n)<br>  
+{   <br>
+printf("%d ", n);<br>   
+n = n - 1;<br>  
+} <br> 
+</code>
+</section>
+
+
+<div id="cont6">
+
+<section class="main-section" id="Arrays">
+<header> Arrays</header>
+<p>Array consists of a group of elements of same data type. We can think it as collection of variables of similar data type.Characteristics/Properties of arrays: </p>
+<ul>
+<li>Non-primary data type </li>
+<li>Memory allocation is contiguous in nature </li>
+<li>Elements need not be unique.</li>
+<li>Demands same /homogenous types of elements</li>
+<li>Elements are accessed using index/subscript</li>
+<li>Index or subscript starts from 0</li>
+<li>Memory is allocated at compile time.</li>
+<li>Size of the array is fixed at compile time. Cannot change the size at runtime.</li>
+<li>Accessing elements of the array outside the bound can have undefined behaviour at runtime. </li>
+</ul>
+<code>
+
+int main()<br> 
+{ <br>
+int arr[100];<br> 
+int n;  <br>
+printf("enter the number of elements\n");<br> 
+ scanf("%d",&n);  <br>
+printf("enter %d elements\n",n);<br>  
+int i = 0;  <br>
+while(i<n)<br>  
+{ <br>
+scanf("%d",&arr[i]);<br> 
+i++;  <br>
+}  <br>
+printf("entered elements are\n");<br>  
+i = 0;  <br>
+while(i<n)  <br>
+{ <br>
+printf("%d\n",arr[i]); i++;  <br>
+}  <br>
+return 0;<br>
+}<br> 
+</code> 
+</section>
+</div>
+ 
+
+<div id="cont7">  
+
+<section class="main-section"  id="Functions">
+<header> Functions</header>
+<p>Functions break large computing tasks into smaller ones and enable people to build on what others have done instead of starting from scratch. In programming, Function is a subprogram to carry out a specific task.  
+ A function is a self-contained block of code that performs a particular task. Once the function is designed, it can be treated as a black box. The inner details of operation are invisible to rest of the program.  
+ Benefits of using functions.</p>
+<ul>
+<li>Reduced Coding Time – Code Reusability</li>
+<li>Modularity</li>
+<li>Reduced Debugging Time</li>
+<li> Sharing </li>
+<li>Maintainability</li>
+</ul>
+<p>A function definition should have a return type. The return type must match with what that function returns at the end of the function execution. If the function is not designed to return anything, then the type must be mentioned as void. Like variables, function name is also an identifier and hence must follow the rules of an identifier. Parameters list is optional. If more than one parameter, it must be comma separated. Each parameter is declared with its type and parameters receive the data sent during the function call. If function has parameters or not,  but the parentheses is must. Block of statements inside the function or body of the function must be inside { and }. There is no indentation requirement as far as the syntax of C is considered.</p>
+
+<p>A function can be called by using function name followed by list of arguments (if any) enclosed in parentheses. The function which calls other function is known to be Caller and the function which is getting called is known to be the Callee. The arguments must match the parameters in the function definition in it’s type, order and number. Multiple arguments must be separated by comma. Arguments can be any expression in C. Need not be always just variables. A function call is an expression. When a function is called, Activation record is created. Activation record is another name for Stack Frame.</p>
+
+<code>
+int sum(int a,  int b) <br>
+{  <br>
+return a+b;<br> 
+} <br>
+</code>
+
+</section>
+</div>
+ 
+<div id="cont8"> 
+
+<section class="main-section" id="Structures">
+<header> Structures</header>
+<p>Structure is a user-defined datatype in C language which allows us to combine data of different types together. It helps to construct a complex data type which is more meaningful. It is often convenient to have a single name with which to refer to a collection of a related items of different types. Structures provide a way of storing many different values in variables of potentially different types under the same name. Structures are generally useful whenever a lot of data needs to be grouped together. For instance, they can be used to hold records from a database or to store information about contacts in an address book. 
+</p>
+<p>A structure creates a data type that can be used to group items of possibly different types into a single type. Grouping of attributes into a single entity is known as Structure. Creating a new type decides the binary layout of the type. Order of fields and the total size of a variable of that type is decided when the new type is created. Characteristics/properties of structures: </p>
+<ul>
+<li>A user defined data type/non-primary/secondary </li>
+<li> Contains one or more components – Generally known as data members</li> 
+<li> Collection of homogeneous or heterogeneous data members</li>
+<li>Size of a structure depends on implementation</li>
+<li>Memory allocation would be at least equal to the sum of the sizes of all the data members in a structure. </li>
+<li>Offset is decided at compile time. </li>
+<li>Compatible structures may be assigned to each other.</li>
+</ul>
+<code>
+struct student<br>
+{        <br>
+ int roll_no;<br>  
+ char name[20];   <br> 
+int marks; <br>
+}; <br>
+</code>
+</section>
+</div>
+
+
+<div id="cont9"> 
+
+<section class="main-section" id="Files">
+<header> Files</header> 
+<p>Variables used in programs will die at the end of the program execution. We use files to persist data even after the program execution is completes. A file represents a sequence of bytes. The data in a file can be structured or unstructured. A program in C can itself be the data file for the program. The keyboard and the output screen are also considered as files.A file is maintained by the operating system. The operating system decides the naming convention of a file. This is referred to as the physical filename.  In a program in a programming language like ‘C’, we use an identifier to refer to a file. This is called the logical name or the file handle.  There is an opaque type (structure declared in stdio.h) called FILE – which is a typedef. This type varies from one implementation to another. We use FILE* in our program so that our program will not depend on the layout of the type FILE. </p>
+
+
+<code>
+ 
+int main()<br> 
+{ <br>
+  FILE *fp = fopen("abc.txt", "r");  <br>  
+printf("%p", fp); <br>
+printf("%d",fp==NULL);  <br>
+fclose(fp);   <br>
+ return 0; <br>
+}<br> 
+ </code>
+</section>
+</div>
+</div>
+</main>
+
+</body>
+</html>
+
+
+
+
+
+
