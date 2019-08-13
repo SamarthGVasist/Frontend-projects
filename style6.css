@@ -1,0 +1,120 @@
+@import "https://fonts.googleapis.com/css?family=Lato:400,700";
+body{
+font-family:'Lato';
+
+}
+
+
+#navbar{
+position:fixed;
+top:0;
+right:0;
+
+}
+
+#navbar ul{
+margin-top:40px;
+margin-right:40px;
+list-style-type:none;
+}
+
+#navbar ul li{
+display:inline;
+padding:10px;
+margin:5px;
+font-size:18px;
+background:black;
+
+border-radius:5px;
+}
+
+#navbar ul li a{
+color:white;
+text-decoration:none;
+}
+
+#navbar ul li a:hover{
+color:black;
+background:#fff;
+}
+
+
+#welcome-section{
+
+text-align:center;
+ top: 0;
+  background: rgb(128,128,255);
+  min-height: 55vh;
+  padding-top: 45vh;
+
+}
+
+
+section{
+margin:0px;
+display:flex;
+justify-content:center;
+background-color:#22313F;
+height:600px;
+}
+
+.project-tile{
+text-align:center;
+width:300px;
+margin:20px;
+padding:10px;
+border:1px solid white;
+border-radius:5px;
+}
+
+.project-tile a{
+
+font-size:18px;
+color:white;
+text-decoration:none;
+}
+
+.project-tile a:hover{
+background-color:#fff;
+color:black;
+border-radius:4px;
+}
+
+
+@media(max-width:800px){
+  div{
+  background-color: rgb(192,192,192);
+}
+}
+
+#footer{
+background-color:rgb(28,202,88);
+text-align:center;
+
+height:90px;
+}
+
+p.des{
+font-size:18px;
+line-height:20px;
+color:rgb(0,0,160);
+background-color:rgb(255,128,64);
+border-radius:5px;
+padding: 10px 0px 10px 10px;
+border:1px solid white;
+}
+
+h1{
+color:rgb(0,0,128);
+
+
+}
+
+h2{
+text-align:center;
+margin-bottom:0px;
+background-color:rgb(189,62,242);
+height:40px;
+color:white;
+text-decoration:underline;
+}
